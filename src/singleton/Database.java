@@ -3,7 +3,7 @@ package singleton;
 public class Database {
     private static Database instance = null;
 
-    protected Database() {
+    private Database() {
         System.out.println("Create new object");
     }
 
@@ -17,7 +17,7 @@ public class Database {
             createInstance();
         return instance;
     }
-    public void query(String databaseName){
+    public void connect(String databaseName){
         System.out.println(databaseName + " query process");
     }
 }
